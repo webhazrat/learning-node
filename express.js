@@ -30,3 +30,10 @@ const checkLogin = (req, res, next) => {
 };
 
 //export default checkLogin;
+
+
+// error handling
+1. By default synchronous error handle by express. This default express middleware implemented automatically placed bottom at the code.
+2. We can add a middleware as default error handler middleware with (err, req, res, next) params. And set it bottom at the code.
+3. We can send custom error by throw and sent it to error handler middleware by next(errors)
+4. Asynchronous error handle with try, catch. If we require to send custom error we can throw errors to catch block.
